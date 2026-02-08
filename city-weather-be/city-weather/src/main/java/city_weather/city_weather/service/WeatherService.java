@@ -30,6 +30,7 @@ public class WeatherService {
                         .path("weather")
                         .queryParam("q", cityName)
                         .queryParam("appid", apiKey)
+                        .queryParam("units", "metric")
                         .build())
                 .retrieve()
                 .bodyToMono(WeatherLayer.class)

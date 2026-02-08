@@ -59,7 +59,14 @@ const Search = () => {
       {searchResult && 
         <div>
           <p className="text-blue-400">The capital of {searchResult.name} is {searchResult.city}. 
-            It's a part of {searchResult.region}.</p>
+            It's a part of {searchResult.region}
+          </p>
+          <p className="text-blue-400">
+            The current weather in {searchResult.city} is {searchResult.weather.description} with a temperature of {searchResult.weather.temperature}°C.
+          </p>
+          <p className="text-blue-400">
+            The humidity in {searchResult.city} is {searchResult.weather.humidity}% and the wind speed is {searchResult.weather.windSpeed} m/s.
+          </p>
         </div>
       }
     </>
